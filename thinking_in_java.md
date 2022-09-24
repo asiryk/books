@@ -20,8 +20,6 @@ Every feature would be considered through that prism.
 
 ## Introduction to Objects
 
-### The progress of abstraction
-
 Programmer must establish association between computer and business problem.
 The more difficult it is, the more expensive and unmaintainable
 the program would be.
@@ -35,7 +33,7 @@ there is multiparadigm language design). OOP allows you to describe
 the problem in terms of problem instead of computer.
 
 
-#### Basic characteristics of OOP language. Pure OOP approach `p. 16`:
+### Basic characteristics of OOP language. Pure OOP approach `p. 16`:
 
 **A program is a bunch of objects telling each other what to do
 by *sending messages***
@@ -49,4 +47,37 @@ by *sending messages***.
 **An object has state, behaviour and identity**.
 It has data, methods and unique address in memory.
 
-### An object has an interface
+First OOP language - Simula-67. Introduced keyword `class`.
+
+Class is an Abstract Data Type - *functional concept in OOP*.
+
+---
+
+Best way to think about objects is as **"service providers"**. It helps
+to improve the cohesiveness of the object.
+
+**High cohesion** is a fundamental quality of software design. `p. 19`.
+
+---
+
+Code reuse is one of the greatest advantages of OOP languages.
+
+**Inheritance** is very importent to OOP, but it leads to awkward and
+overly complicated designs. Instead, you should first look to
+**composition**, when creating new classes, since it is simpler and
+more flexible.
+
+> When Bruce talks about inheritance, it seems he means implementation of
+an interface, not overriding existing functionality (at least in the examples).
+And it didn't convince me that inheritance and overrides are a good thing.
+
+Java uses **late binding** by default: means that calls of all polymorphic
+method calls are calculated in runtime. `p. 26`. It is so because
+the compiler can not know at compile time what code to execute, like
+Box<dyn> in Rust.
+
+Downcasting reqiure extra runtime resources.
+
+Java uses dynamic memory allocation exclusively.
+
+## Everything is an object
